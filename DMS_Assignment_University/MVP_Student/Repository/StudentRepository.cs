@@ -166,5 +166,33 @@ namespace DMS_Assignment_University.MVP_Student.Repository
                 commnand.ExecuteNonQuery();
             }
         }
+
+        public IEnumerable<Class> get_class_by_ID(string input)
+        {
+            var result = new List<Class>();
+            using (var connection = new MySqlConnection(connection_string))
+            using (var commnand = new MySqlCommand())
+            {
+                connection.Open();
+                commnand.Connection = connection;
+                commnand.CommandText = $"call get_class_list_by_id(\'{input}\')";
+                using (var reader = commnand.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        result.Add(new Class
+                        {
+                            Class_name = reader[0].ToString(),
+                            Subject_id = reader[1].ToString(),
+                            Subject_name = reader[2].ToString(),
+                            Num_credit = Convert.ToInt32(reader[3]),
+                            Semester = Convert.ToInt32(reader[4]),
+                            Current_number_member = Get_number_member(reader[1].ToString(), reader[0].ToString())
+                        });
+                    }
+                }
+            }
+            return result;
+        }
     }
 }

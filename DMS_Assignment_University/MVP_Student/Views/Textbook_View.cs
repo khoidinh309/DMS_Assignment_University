@@ -21,8 +21,9 @@ namespace DMS_Assignment_University.MVP_Student.Views
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
+            StudentView.instance.MdiParent = MainStudentView.global_view;
+            StudentView.instance.Show();
+            this.Close();
         }
     }
 }

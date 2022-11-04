@@ -19,5 +19,11 @@ namespace DMS_Assignment_University.MVP_Student.Views
             txtbox_faculty_name.Text = fac_name;
         }
         public static MainStudentView global_view;
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Form1.instance.Show();
+            this.Close();
+        }
     }
 }

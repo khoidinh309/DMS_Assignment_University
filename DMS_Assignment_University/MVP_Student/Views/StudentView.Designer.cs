@@ -46,7 +46,7 @@
             this.datagrid_list_sub.Name = "datagrid_list_sub";
             this.datagrid_list_sub.RowHeadersWidth = 62;
             this.datagrid_list_sub.RowTemplate.Height = 28;
-            this.datagrid_list_sub.Size = new System.Drawing.Size(585, 374);
+            this.datagrid_list_sub.Size = new System.Drawing.Size(845, 374);
             this.datagrid_list_sub.TabIndex = 2;
             // 
             // label1
@@ -61,7 +61,7 @@
             // btn_textbook_list
             // 
             this.btn_textbook_list.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_textbook_list.Location = new System.Drawing.Point(656, 259);
+            this.btn_textbook_list.Location = new System.Drawing.Point(916, 259);
             this.btn_textbook_list.Name = "btn_textbook_list";
             this.btn_textbook_list.Size = new System.Drawing.Size(99, 41);
             this.btn_textbook_list.TabIndex = 3;
@@ -71,7 +71,7 @@
             // btn_register
             // 
             this.btn_register.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_register.Location = new System.Drawing.Point(656, 64);
+            this.btn_register.Location = new System.Drawing.Point(916, 64);
             this.btn_register.Name = "btn_register";
             this.btn_register.Size = new System.Drawing.Size(99, 41);
             this.btn_register.TabIndex = 3;
@@ -81,7 +81,7 @@
             // btn_cancel
             // 
             this.btn_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_cancel.Location = new System.Drawing.Point(656, 156);
+            this.btn_cancel.Location = new System.Drawing.Point(916, 156);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(99, 41);
             this.btn_cancel.TabIndex = 3;
@@ -92,7 +92,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1060, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_textbook_list);
             this.Controls.Add(this.btn_cancel);

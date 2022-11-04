@@ -90,5 +90,28 @@ namespace DMS_Assignment_University.MVP_Student.Views
                 instance_register_form.BringToFront();
             }
         }
+
+        private void btn_search_subject_Click(object sender, EventArgs e)
+        {
+            string input_subject_info = txtbox_search_subject.Text;
+            if(input_subject_info == "")
+            {
+                Load_Released_Subject_List();
+                return;
+            }
+            else
+            {
+                IEnumerable<Class> search_list_result = studentRepository.get_class_by_ID(input_subject_info);
+                if (search_list_result.Count() == 0)
+                {
+                    MessageBox.Show("Mon Hoc Chua Duoc Mo!");
+                }
+                else
+                {
+                    class_list.DataSource = search_list_result;
+                    datagrid_subject.DataSource = class_list;
+                }
+            }
+        }
     }
 }

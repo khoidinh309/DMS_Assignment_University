@@ -34,5 +34,23 @@ namespace DMS_Assignment_University
         {
 
         }
+
+        public static Form1 instance = null;
+        public static Form1 Get_instance_form1()
+        {
+            if (instance == null)
+            {
+                instance = new Form1();
+                instance.FormBorderStyle = FormBorderStyle.None;
+                instance.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                if (instance.WindowState == FormWindowState.Minimized)
+                    instance.WindowState = FormWindowState.Normal;
+                instance.BringToFront();
+            }
+            return instance;
+        }
     }
 }

@@ -20,5 +20,6 @@ namespace DMS_Assignment_University.MVP_Student.Models
         bool check_registered_class(string class_name, string subID);
         void delete_registered_class(string subID);
         void cancel_registered_class(string class_name, string subID);
+        IEnumerable<Class> get_class_by_ID(string input);
     }
 }

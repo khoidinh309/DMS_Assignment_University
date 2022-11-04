@@ -55,14 +55,17 @@ namespace DMS_Assignment_University.MVP_Student.Presenter
 
         private void View_Textbook(object sender, EventArgs e)
         {
-            var subject = (Subject)_bindingsource_subject.Current;
-            IEnumerable<Textbook> textbook_list = studentRepository.Get_Textbooks(subject.Id);
-            Textbook_View textbook_View = new Textbook_View(textbook_list, subject.Name);
-            studentView.Hide();
-            textbook_View.MdiParent = main_view;
-            textbook_View.Show();
-            textbook_View.FormBorderStyle = FormBorderStyle.None;
-            textbook_View.Dock = DockStyle.Fill;
+            var subject = (Class)_bindingsource_subject.Current;
+            if (subject != null)
+            {
+                IEnumerable<Textbook> textbook_list = studentRepository.Get_Textbooks(subject.Subject_id);
+                Textbook_View textbook_View = new Textbook_View(textbook_list, subject.Class_name);
+                studentView.Hide();
+                textbook_View.MdiParent = main_view;
+                textbook_View.Show();
+                textbook_View.FormBorderStyle = FormBorderStyle.None;
+                textbook_View.Dock = DockStyle.Fill;
+            }
         }
 
         private void Load_Subject_List()
