@@ -57,11 +57,46 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Log_Lecturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log_Lecturer.Designer.cs">
+      <DependentUpon>Log_Lecturer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Log_Student.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Log_Student.Designer.cs">
       <DependentUpon>Log_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVP_Lecturer\Models\ILecturerRepository.cs" />
+    <Compile Include="MVP_Lecturer\Presenter\LecturerPresenter.cs" />
+    <Compile Include="MVP_Lecturer\Presenter\MainPresenter.cs" />
+    <Compile Include="MVP_Lecturer\Repository\LecturerRepository.cs" />
+    <Compile Include="MVP_Lecturer\Views\AddTextBookView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVP_Lecturer\Views\AddTextBookView.Designer.cs">
+      <DependentUpon>AddTextBookView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVP_Lecturer\Views\ILecturerView.cs" />
+    <Compile Include="MVP_Lecturer\Views\LecturerMainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVP_Lecturer\Views\LecturerMainView.Designer.cs">
+      <DependentUpon>LecturerMainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVP_Lecturer\Views\LecturerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVP_Lecturer\Views\LecturerView.Designer.cs">
+      <DependentUpon>LecturerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVP_Lecturer\Views\Member_List_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVP_Lecturer\Views\Member_List_View.Designer.cs">
+      <DependentUpon>Member_List_View.cs</DependentUpon>
     </Compile>
     <Compile Include="MVP_Student\Models\IStudentRepository.cs" />
     <Compile Include="MVP_Student\Models\StudentModel.cs" />
@@ -100,8 +135,23 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Log_Lecturer.resx">
+      <DependentUpon>Log_Lecturer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Log_Student.resx">
       <DependentUpon>Log_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVP_Lecturer\Views\AddTextBookView.resx">
+      <DependentUpon>AddTextBookView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVP_Lecturer\Views\LecturerMainView.resx">
+      <DependentUpon>LecturerMainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVP_Lecturer\Views\LecturerView.resx">
+      <DependentUpon>LecturerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVP_Lecturer\Views\Member_List_View.resx">
+      <DependentUpon>Member_List_View.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MVP_Student\Views\MainStudentView.resx">
       <DependentUpon>MainStudentView.cs</DependentUpon>
@@ -143,10 +193,6 @@
     <Folder Include="MVP_Faculty\Presenter\" />
     <Folder Include="MVP_Faculty\Repository\" />
     <Folder Include="MVP_Faculty\Views\" />
-    <Folder Include="MVP_Lecturer\Models\" />
-    <Folder Include="MVP_Lecturer\Presenter\" />
-    <Folder Include="MVP_Lecturer\Repository\" />
-    <Folder Include="MVP_Lecturer\Views\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resource\hcmut.png" />
