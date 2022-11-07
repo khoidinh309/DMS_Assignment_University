@@ -27,12 +27,16 @@ namespace DMS_Assignment_University
 
         private void btn_log_lecturer_Click(object sender, EventArgs e)
         {
-
+            Log_Lecturer log_lecturer = new Log_Lecturer();
+            log_lecturer.Show();
+            this.Hide();
         }
 
         private void btn_log_faculty_Click(object sender, EventArgs e)
         {
-
+            Log_Faculty log_Faculty = new Log_Faculty();
+            log_Faculty.Show();
+            this.Hide();
         }
 
         public static Form1 instance = null;
