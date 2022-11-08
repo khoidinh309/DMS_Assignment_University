@@ -51,7 +51,7 @@
             // 
             // btn_add_new_subject
             // 
-            this.btn_add_new_subject.Location = new System.Drawing.Point(619, 13);
+            this.btn_add_new_subject.Location = new System.Drawing.Point(619, 30);
             this.btn_add_new_subject.Name = "btn_add_new_subject";
             this.btn_add_new_subject.Size = new System.Drawing.Size(135, 47);
             this.btn_add_new_subject.TabIndex = 1;
@@ -60,7 +60,7 @@
             // 
             // btn_add_new_class
             // 
-            this.btn_add_new_class.Location = new System.Drawing.Point(619, 111);
+            this.btn_add_new_class.Location = new System.Drawing.Point(619, 124);
             this.btn_add_new_class.Name = "btn_add_new_class";
             this.btn_add_new_class.Size = new System.Drawing.Size(135, 47);
             this.btn_add_new_class.TabIndex = 1;
@@ -69,7 +69,7 @@
             // 
             // btn_lecturer_view
             // 
-            this.btn_lecturer_view.Location = new System.Drawing.Point(619, 212);
+            this.btn_lecturer_view.Location = new System.Drawing.Point(619, 230);
             this.btn_lecturer_view.Name = "btn_lecturer_view";
             this.btn_lecturer_view.Size = new System.Drawing.Size(135, 47);
             this.btn_lecturer_view.TabIndex = 1;
@@ -78,7 +78,7 @@
             // 
             // btn_view_textbook
             // 
-            this.btn_view_textbook.Location = new System.Drawing.Point(619, 310);
+            this.btn_view_textbook.Location = new System.Drawing.Point(619, 328);
             this.btn_view_textbook.Name = "btn_view_textbook";
             this.btn_view_textbook.Size = new System.Drawing.Size(135, 47);
             this.btn_view_textbook.TabIndex = 1;

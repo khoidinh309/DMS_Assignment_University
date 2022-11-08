@@ -43,7 +43,9 @@ namespace DMS_Assignment_University.MVP_Faculty.Presenter
 
         private void View_Lecturer(object sender, EventArgs e)
         {
-            
+            LecuturerViewForm lecuturerViewForm = new LecuturerViewForm(facultyRepository);
+            lecuturerViewForm.MdiParent = FacultyMainView.global_view;
+            lecuturerViewForm.Show();
         }
 
         private void Add_New_Subject(object sender, EventArgs e)

@@ -32,7 +32,9 @@
             this.txtbox_search_info = new System.Windows.Forms.TextBox();
             this.btn_search = new System.Windows.Forms.Button();
             this.btn_add_subject = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_unreleased_subject)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // datagrid_unreleased_subject
@@ -74,11 +76,23 @@
             this.btn_add_subject.Text = "Thêm";
             this.btn_add_subject.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DMS_Assignment_University.Properties.Resources.back_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(712, 18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(58, 49);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Add_Subject_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_add_subject);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.txtbox_search_info);
@@ -86,6 +100,7 @@
             this.Name = "Add_Subject_Form";
             this.Text = "Add_Subject_Form";
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_unreleased_subject)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,5 +112,6 @@
         private System.Windows.Forms.TextBox txtbox_search_info;
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.Button btn_add_subject;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

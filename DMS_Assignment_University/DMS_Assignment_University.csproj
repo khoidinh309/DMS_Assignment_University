@@ -57,6 +57,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="LecturerModel.cs" />
     <Compile Include="Log_Faculty.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +86,12 @@
     <Compile Include="MVP_Faculty\Views\Add_Subject_Form.Designer.cs">
       <DependentUpon>Add_Subject_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="MVP_Faculty\Views\ClassListViewByLecturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVP_Faculty\Views\ClassListViewByLecturer.Designer.cs">
+      <DependentUpon>ClassListViewByLecturer.cs</DependentUpon>
+    </Compile>
     <Compile Include="MVP_Faculty\Views\ClassView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +111,18 @@
       <DependentUpon>FacultyView.cs</DependentUpon>
     </Compile>
     <Compile Include="MVP_Faculty\Views\IFacultyView.cs" />
+    <Compile Include="MVP_Faculty\Views\LecuturerViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVP_Faculty\Views\LecuturerViewForm.Designer.cs">
+      <DependentUpon>LecuturerViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVP_Faculty\Views\TextBookView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVP_Faculty\Views\TextBookView.Designer.cs">
+      <DependentUpon>TextBookView.cs</DependentUpon>
+    </Compile>
     <Compile Include="MVP_Lecturer\Models\ILecturerRepository.cs" />
     <Compile Include="MVP_Lecturer\Presenter\LecturerPresenter.cs" />
     <Compile Include="MVP_Lecturer\Presenter\MainPresenter.cs" />
@@ -182,6 +201,9 @@
     <EmbeddedResource Include="MVP_Faculty\Views\Add_Subject_Form.resx">
       <DependentUpon>Add_Subject_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MVP_Faculty\Views\ClassListViewByLecturer.resx">
+      <DependentUpon>ClassListViewByLecturer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MVP_Faculty\Views\ClassView.resx">
       <DependentUpon>ClassView.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +212,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MVP_Faculty\Views\FacultyView.resx">
       <DependentUpon>FacultyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVP_Faculty\Views\LecuturerViewForm.resx">
+      <DependentUpon>LecuturerViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVP_Faculty\Views\TextBookView.resx">
+      <DependentUpon>TextBookView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MVP_Lecturer\Views\AddTextBookView.resx">
       <DependentUpon>AddTextBookView.cs</DependentUpon>

@@ -32,12 +32,22 @@ namespace DMS_Assignment_University.MVP_Faculty.Repository
             throw new NotImplementedException();
         }
 
+        public IEnumerable<LecturerModel> Get_Lecturer_List()
+        {
+            throw new NotImplementedException();
+        }
+
         public int Get_Number_Member(string subID, string class_name)
         {
             throw new NotImplementedException();
         }
 
         public IEnumerable<Subject> Get_Released_Subject_List()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Class> Get_Teaching_Class_List(int lecturer_ID)
         {
             throw new NotImplementedException();
         }
