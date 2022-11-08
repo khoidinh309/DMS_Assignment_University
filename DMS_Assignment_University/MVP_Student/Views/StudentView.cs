@@ -34,6 +34,14 @@ namespace DMS_Assignment_University.MVP_Student.Views
         public void SetListSubject(BindingSource list_subject)
         {
             datagrid_list_sub.DataSource = list_subject;
+            this.lb_number_registered_subject.Text = "Số môn: " + list_subject.Count.ToString();
+            int number_credits = 0;
+            IEnumerable<Class> classes = list_subject.OfType<Class>();
+            foreach (var item in classes)
+            {
+                number_credits += item.Num_credit;
+            }
+            this.lb_number_credit_sum.Text = "Số tín chỉ: " + number_credits.ToString();
         }
 
         public static StudentView instance;

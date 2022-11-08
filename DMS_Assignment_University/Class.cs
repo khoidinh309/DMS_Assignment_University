@@ -15,6 +15,7 @@ namespace DMS_Assignment_University
         private int num_credit;
         private int semester;
         private int current_number_member;
+        private string lecturer_name;
         private string day;
         private string started_time;
         public string Class_name { get => class_name; set => class_name = value; }
@@ -23,6 +24,7 @@ namespace DMS_Assignment_University
         public int Semester { get => semester; set => semester = value; }
         public int Num_credit { get => num_credit; set => num_credit = value; }
         public int Current_number_member { get => current_number_member; set => current_number_member = value; }
+        public string Lecturer_name { get => lecturer_name; set => lecturer_name = value; }
         public string Day { get => day; set => day = value; }
         public string Started_time { get => started_time; set => started_time = value; }
     }

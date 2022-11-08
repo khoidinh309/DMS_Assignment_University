@@ -33,6 +33,8 @@
             this.btn_textbook_list = new System.Windows.Forms.Button();
             this.btn_register = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
+            this.lb_number_registered_subject = new System.Windows.Forms.Label();
+            this.lb_number_credit_sum = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_list_sub)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +48,7 @@
             this.datagrid_list_sub.Name = "datagrid_list_sub";
             this.datagrid_list_sub.RowHeadersWidth = 62;
             this.datagrid_list_sub.RowTemplate.Height = 28;
-            this.datagrid_list_sub.Size = new System.Drawing.Size(845, 374);
+            this.datagrid_list_sub.Size = new System.Drawing.Size(785, 307);
             this.datagrid_list_sub.TabIndex = 2;
             // 
             // label1
@@ -88,11 +90,31 @@
             this.btn_cancel.Text = "Cancel";
             this.btn_cancel.UseVisualStyleBackColor = true;
             // 
+            // lb_number_registered_subject
+            // 
+            this.lb_number_registered_subject.AutoSize = true;
+            this.lb_number_registered_subject.Location = new System.Drawing.Point(26, 399);
+            this.lb_number_registered_subject.Name = "lb_number_registered_subject";
+            this.lb_number_registered_subject.Size = new System.Drawing.Size(81, 20);
+            this.lb_number_registered_subject.TabIndex = 5;
+            this.lb_number_registered_subject.Text = "Số môn: 5";
+            // 
+            // lb_number_credit_sum
+            // 
+            this.lb_number_credit_sum.AutoSize = true;
+            this.lb_number_credit_sum.Location = new System.Drawing.Point(200, 399);
+            this.lb_number_credit_sum.Name = "lb_number_credit_sum";
+            this.lb_number_credit_sum.Size = new System.Drawing.Size(100, 20);
+            this.lb_number_credit_sum.TabIndex = 5;
+            this.lb_number_credit_sum.Text = "Số tín chỉ: 12";
+            // 
             // StudentView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1060, 450);
+            this.Controls.Add(this.lb_number_credit_sum);
+            this.Controls.Add(this.lb_number_registered_subject);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_textbook_list);
             this.Controls.Add(this.btn_cancel);
@@ -113,5 +135,7 @@
         private System.Windows.Forms.Button btn_textbook_list;
         private System.Windows.Forms.Button btn_register;
         private System.Windows.Forms.Button btn_cancel;
+        private System.Windows.Forms.Label lb_number_registered_subject;
+        private System.Windows.Forms.Label lb_number_credit_sum;
     }
 }

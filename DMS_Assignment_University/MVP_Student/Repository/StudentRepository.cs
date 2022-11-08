@@ -102,7 +102,9 @@ namespace DMS_Assignment_University.MVP_Student.Repository
                             Class_name = reader[0].ToString(),
                             Subject_id = reader[1].ToString(),
                             Subject_name = reader[2].ToString(),
-                            Semester = Convert.ToInt32(reader[3])
+                            Semester = Convert.ToInt32(reader[3]),
+                            Num_credit = Convert.ToInt32(reader[4]),
+                            Lecturer_name = get_lecturer_name(reader[1].ToString(), reader[0].ToString())
                         });
                     }
                 }
@@ -187,12 +189,34 @@ namespace DMS_Assignment_University.MVP_Student.Repository
                             Subject_name = reader[2].ToString(),
                             Num_credit = Convert.ToInt32(reader[3]),
                             Semester = Convert.ToInt32(reader[4]),
-                            Current_number_member = Get_number_member(reader[1].ToString(), reader[0].ToString())
+                            Current_number_member = Get_number_member(reader[1].ToString(), reader[0].ToString()),
+                            Lecturer_name = get_lecturer_name(reader[1].ToString(), reader[0].ToString())
                         });
                     }
                 }
             }
             return result;
+        }
+
+        public string get_lecturer_name(string subID, string class_name)
+        {
+            string lecturer_name = "Chưa phân công";
+            using (var connection = new MySqlConnection(connection_string))
+            using (var commnand = new MySqlCommand())
+            {
+                connection.Open();
+                commnand.Connection = connection;
+                commnand.CommandText = $"select l.full_name from teach as t, lecturer as l " +
+                    $"where t.class_name = \'{class_name}\' and t.subID = \'{subID}\' and l.lecturer_Id = t.lecturer_Id";
+                using (var reader = commnand.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        lecturer_name = reader[0].ToString();
+                    }
+                }
+            }
+            return lecturer_name;
         }
     }
 }

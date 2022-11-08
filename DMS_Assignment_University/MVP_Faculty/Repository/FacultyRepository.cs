@@ -52,7 +52,17 @@ namespace DMS_Assignment_University.MVP_Faculty.Repository
             throw new NotImplementedException();
         }
 
+        public IEnumerable<Textbook> Get_Textbook_List(string subID)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Subject> Get_Unreleased_Subject_List()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Remove_Lecturer_From_Class(string class_name, string subID, int lecturer_ID)
         {
             throw new NotImplementedException();
         }
