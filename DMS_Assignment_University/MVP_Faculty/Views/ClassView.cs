@@ -38,7 +38,7 @@ namespace DMS_Assignment_University.MVP_Faculty.Views
         {
             try
             {
-                this.facultyRepository.Add_New_Class();
+                //this.facultyRepository.Add_New_Class();
             }
             catch (Exception ex)
             {

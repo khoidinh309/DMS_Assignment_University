@@ -57,6 +57,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gradient_Panel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="LecturerModel.cs" />
     <Compile Include="Log_Faculty.cs">
       <SubType>Form</SubType>
@@ -266,7 +269,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resource\user_icon.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resource\hcmut.png" />
   </ItemGroup>
@@ -278,6 +283,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resource\power-off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\profile-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\logout.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

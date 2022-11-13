@@ -4,20 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DMS_Assignment_University.MVP_Faculty.Models;
+using MySql.Data.MySqlClient;
 
 namespace DMS_Assignment_University.MVP_Faculty.Repository
 {
     public class FacultyRepository : IFacultyRepository
     {
-        private readonly string connection;
+        private readonly string connection_string;
         private int facultyID;
         public FacultyRepository(string connection, int facultyID)
         {
-            this.connection = connection;
+            this.connection_string = connection;
             this.facultyID = facultyID;
         }
 
-        public void Add_New_Class()
+        public void Add_New_Class(string ID)
         {
             throw new NotImplementedException();
         }
@@ -39,7 +40,23 @@ namespace DMS_Assignment_University.MVP_Faculty.Repository
 
         public int Get_Number_Member(string subID, string class_name)
         {
-            throw new NotImplementedException();
+            int number_of_member = 0;
+            using (var connection = new MySqlConnection(connection_string))
+            using (var commnand = new MySqlCommand())
+            {
+                connection.Open();
+                commnand.Connection = connection;
+                commnand.CommandText = $"call get_number_member(\'{subID}\',\'{class_name}\')";
+                using (var reader = commnand.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        number_of_member = Convert.ToInt32(reader[0].ToString());
+                    }
+                }
+            }
+
+            return number_of_member;
         }
 
         public IEnumerable<Subject> Get_Released_Subject_List()

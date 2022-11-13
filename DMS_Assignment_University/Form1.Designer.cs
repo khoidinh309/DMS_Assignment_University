@@ -40,9 +40,9 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::DMS_Assignment_University.Properties.Resources.hcmut;
-            this.pictureBox1.Location = new System.Drawing.Point(350, 52);
+            this.pictureBox1.Location = new System.Drawing.Point(350, 73);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(213, 131);
+            this.pictureBox1.Size = new System.Drawing.Size(481, 131);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -58,9 +58,11 @@
             // btn_log_student
             // 
             this.btn_log_student.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_log_student.Location = new System.Drawing.Point(304, 255);
+            this.btn_log_student.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_log_student.ForeColor = System.Drawing.Color.Aqua;
+            this.btn_log_student.Location = new System.Drawing.Point(304, 276);
             this.btn_log_student.Name = "btn_log_student";
-            this.btn_log_student.Size = new System.Drawing.Size(294, 56);
+            this.btn_log_student.Size = new System.Drawing.Size(562, 56);
             this.btn_log_student.TabIndex = 2;
             this.btn_log_student.Text = "Student";
             this.btn_log_student.UseVisualStyleBackColor = true;
@@ -69,9 +71,11 @@
             // btn_log_lecturer
             // 
             this.btn_log_lecturer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_log_lecturer.Location = new System.Drawing.Point(304, 337);
+            this.btn_log_lecturer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_log_lecturer.ForeColor = System.Drawing.Color.Aqua;
+            this.btn_log_lecturer.Location = new System.Drawing.Point(304, 358);
             this.btn_log_lecturer.Name = "btn_log_lecturer";
-            this.btn_log_lecturer.Size = new System.Drawing.Size(294, 56);
+            this.btn_log_lecturer.Size = new System.Drawing.Size(562, 56);
             this.btn_log_lecturer.TabIndex = 2;
             this.btn_log_lecturer.Text = "Lecturer";
             this.btn_log_lecturer.UseVisualStyleBackColor = true;
@@ -80,9 +84,11 @@
             // btn_log_faculty
             // 
             this.btn_log_faculty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_log_faculty.Location = new System.Drawing.Point(304, 416);
+            this.btn_log_faculty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_log_faculty.ForeColor = System.Drawing.Color.Aqua;
+            this.btn_log_faculty.Location = new System.Drawing.Point(304, 437);
             this.btn_log_faculty.Name = "btn_log_faculty";
-            this.btn_log_faculty.Size = new System.Drawing.Size(294, 56);
+            this.btn_log_faculty.Size = new System.Drawing.Size(562, 56);
             this.btn_log_faculty.TabIndex = 2;
             this.btn_log_faculty.Text = "Faculty";
             this.btn_log_faculty.UseVisualStyleBackColor = true;
@@ -92,12 +98,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(858, 561);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.ClientSize = new System.Drawing.Size(1126, 603);
             this.Controls.Add(this.btn_log_faculty);
             this.Controls.Add(this.btn_log_lecturer);
             this.Controls.Add(this.btn_log_student);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
