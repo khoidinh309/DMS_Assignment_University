@@ -104,7 +104,8 @@ namespace DMS_Assignment_University.MVP_Student.Repository
                             Subject_name = reader[2].ToString(),
                             Semester = Convert.ToInt32(reader[3]),
                             Num_credit = Convert.ToInt32(reader[4]),
-                            Lecturer_name = get_lecturer_name(reader[1].ToString(), reader[0].ToString())
+                            Lecturer_name = get_lecturer_name(reader[1].ToString(), reader[0].ToString()),
+                            Current_number_member = Get_number_member(reader[1].ToString(), reader[0].ToString())
                         });
                     }
                 }

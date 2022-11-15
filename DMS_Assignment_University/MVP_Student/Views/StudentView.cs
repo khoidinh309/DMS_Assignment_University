@@ -34,6 +34,7 @@ namespace DMS_Assignment_University.MVP_Student.Views
         public void SetListSubject(BindingSource list_subject)
         {
             datagrid_list_sub.DataSource = list_subject;
+           
             this.lb_number_registered_subject.Text = "Số môn: " + list_subject.Count.ToString();
             int number_credits = 0;
             IEnumerable<Class> classes = list_subject.OfType<Class>();
@@ -42,6 +43,13 @@ namespace DMS_Assignment_University.MVP_Student.Views
                 number_credits += item.Num_credit;
             }
             this.lb_number_credit_sum.Text = "Số tín chỉ: " + number_credits.ToString();
+            for(int i = 0;i<datagrid_list_sub.Rows.Count;i++)
+            {
+                if(i%2 != 0)
+                {
+                    datagrid_list_sub.Rows[i].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#772aff");
+                }
+            }
         }
 
         public static StudentView instance;

@@ -56,5 +56,20 @@ namespace DMS_Assignment_University
             }
             return instance;
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox2_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox2.BackColor = Color.Aqua;
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox2.BackColor = ColorTranslator.FromHtml("#010615");
+        }
     }
 }
