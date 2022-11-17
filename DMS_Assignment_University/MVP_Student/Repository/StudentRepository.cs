@@ -81,7 +81,27 @@ namespace DMS_Assignment_University.MVP_Student.Repository
 
         public IEnumerable<Textbook> Get_Textbooks(string subject_id)
         {
-            throw new NotImplementedException();
+            var result = new List<Textbook>();
+            using (var connection = new MySqlConnection(connection_string))
+            using (var commnand = new MySqlCommand())
+            {
+                connection.Open();
+                commnand.Connection = connection;
+                commnand.CommandText = $"call get_textbook_list({subject_id})";
+                using (var reader = commnand.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        result.Add(new Textbook
+                        {
+                            Id = Convert.ToInt32(reader[0]),
+                            Name = reader[1].ToString(),
+                            Specialization = reader[2].ToString()
+                        });
+                    }
+                }
+            }
+            return result;
         }
 
         public IEnumerable<Class> List_All_Subject()

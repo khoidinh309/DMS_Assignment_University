@@ -60,8 +60,6 @@ namespace DMS_Assignment_University.MVP_Student.Presenter
             {
                 IEnumerable<Textbook> textbook_list = studentRepository.Get_Textbooks(subject.Subject_id);
                 Textbook_View textbook_View = new Textbook_View(textbook_list, subject.Class_name);
-                studentView.Hide();
-                textbook_View.MdiParent = main_view;
                 textbook_View.Show();
                 textbook_View.FormBorderStyle = FormBorderStyle.None;
                 textbook_View.Dock = DockStyle.Fill;

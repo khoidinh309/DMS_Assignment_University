@@ -16,7 +16,6 @@ namespace DMS_Assignment_University.MVP_Student.Views
         {
             InitializeComponent();
             datagid_textbook.DataSource = textbook_list;
-            txtbox_name_subject.Text = subject_name;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

@@ -31,12 +31,27 @@ namespace DMS_Assignment_University.MVP_Lecturer.Presenter
 
         private void View_TextBook(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var selected_subject = teaching_class_list.Current as Class;
+            if (selected_subject != null) {
+                TextBookView.Get_TextbookView_Instance(lecturerRepository, selected_subject.Subject_id);
+            }
+            else
+            {
+                MessageBox.Show("Vui Lòng Chọn Lớp");
+            }
         }
 
         private void Add_TextBook(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var selected_subject = teaching_class_list.Current as Class;
+            if (selected_subject != null)
+            {
+                AddTextBookView.Get_Add_Book_View_Instance(mainView, selected_subject.Subject_id, selected_subject.Subject_name, lecturerRepository);
+            }
+            else
+            {
+                MessageBox.Show("Vui Lòng Chọn Lớp!");
+            }
         }
 
         private void Load_teaching_class_list()
@@ -49,7 +64,10 @@ namespace DMS_Assignment_University.MVP_Lecturer.Presenter
         private void View_Student_List(object sender, EventArgs e)
         {
             var selected_class = teaching_class_list.Current as Class;
-            Member_List_View.Get_Instance_Member_List_View(lecturerRepository, mainView, selected_class.Subject_id,selected_class.Class_name);
+            if (selected_class != null)
+                Member_List_View.Get_Instance_Member_List_View(lecturerRepository, mainView, selected_class.Subject_id, selected_class.Class_name);
+            else
+                MessageBox.Show("Vui Lòng Chọn Lớp!");
         }
     }
 }

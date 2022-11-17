@@ -320,6 +320,12 @@
     <Compile Include="MVP_Lecturer\Views\Member_List_View.Designer.cs">
       <DependentUpon>Member_List_View.cs</DependentUpon>
     </Compile>
+    <Compile Include="MVP_Lecturer\Views\TextBookView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVP_Lecturer\Views\TextBookView.Designer.cs">
+      <DependentUpon>TextBookView.cs</DependentUpon>
+    </Compile>
     <Compile Include="MVP_Student\Models\IStudentRepository.cs" />
     <Compile Include="MVP_Student\Models\StudentModel.cs" />
     <Compile Include="MVP_Student\Presenter\MainPresenter.cs" />
@@ -398,6 +404,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MVP_Lecturer\Views\Member_List_View.resx">
       <DependentUpon>Member_List_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVP_Lecturer\Views\TextBookView.resx">
+      <DependentUpon>TextBookView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MVP_Student\Views\MainStudentView.resx">
       <DependentUpon>MainStudentView.cs</DependentUpon>

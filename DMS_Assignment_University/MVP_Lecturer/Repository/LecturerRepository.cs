@@ -19,6 +19,42 @@ namespace DMS_Assignment_University.MVP_Lecturer.Repository
             this.lecturer_id = lecturer_id;
         }
 
+        public void Add_New_TextBook(string subID, string texbook_name, string specialization)
+        {
+            using (var connection = new MySqlConnection(connection_string))
+            using (var commnand = new MySqlCommand())
+            {
+                connection.Open();
+                commnand.Connection = connection;
+                commnand.CommandText = $"call add_new_textbook({this.lecturer_id},\'{subID}\',\'{texbook_name}\',\'{specialization}\')";
+                commnand.ExecuteNonQuery();
+            }
+        }
+
+        public Textbook Get_Existing_TextBook(string subID)
+        {
+            Textbook existing_textbook = new Textbook();
+            existing_textbook.Id = -1;
+            using (var connection = new MySqlConnection(connection_string))
+            using (var commnand = new MySqlCommand())
+            {
+                connection.Open();
+                commnand.Connection = connection;
+                commnand.CommandText = $"select m.textbook_id, t.textbook_name, t.specialization from textbook as t, manage_subject as m" +
+                                        $" where m.textbook_id = t.textbook_id and m.subid = \'{subID}\' and m.lecturer_id = {this.lecturer_id}";
+                using (var reader = commnand.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        existing_textbook.Id = Convert.ToInt32(reader[0]);
+                        existing_textbook.Name = reader[1].ToString();
+                        existing_textbook.Specialization = reader[2].ToString();
+                    }
+                }
+                return existing_textbook;
+            }
+        }
+
         public IEnumerable<StudentModel> get_student_list(string subID, string class_name)
         {
             var result = new List<StudentModel>();
@@ -71,6 +107,44 @@ namespace DMS_Assignment_University.MVP_Lecturer.Repository
                 }
             }
             return result;
+        }
+
+        public IEnumerable<Textbook> Get_Textbook_List(string subID)
+        {
+            var result = new List<Textbook>();
+            using (var connection = new MySqlConnection(connection_string))
+            using (var commnand = new MySqlCommand())
+            {
+                connection.Open();
+                commnand.Connection = connection;
+                commnand.CommandText = $"call get_textbook_list({subID})";
+                using (var reader = commnand.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        result.Add(new Textbook
+                        {
+                           Id = Convert.ToInt32(reader[0]),
+                           Name = reader[1].ToString(),
+                           Specialization = reader[2].ToString()
+                        });
+                    }
+                }
+            }
+            return result;
+        }
+
+        public void Modify_TextBook(Textbook textbook)
+        {
+            using (var connection = new MySqlConnection(connection_string))
+            using (var commnand = new MySqlCommand())
+            {
+                connection.Open();
+                commnand.Connection = connection;
+                commnand.CommandText = $"update textbook set textbook_name = \'{textbook.Name}\', specialization = \'{textbook.Specialization}\'" +
+                                       $" where textbook_id = {textbook.Id}";
+                commnand.ExecuteNonQuery();
+            }
         }
 
         private int Get_number_member(string subID, string class_name)

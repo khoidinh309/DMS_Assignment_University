@@ -11,5 +11,9 @@ namespace DMS_Assignment_University.MVP_Lecturer.Models
     {
         IEnumerable<Class> get_teaching_class();
         IEnumerable<StudentModel> get_student_list(string subID, string class_name);
+        void Add_New_TextBook(string subID, string texbook_name, string specialization);
+        Textbook Get_Existing_TextBook(string subID);
+        void Modify_TextBook(Textbook textbook);
+        IEnumerable<Textbook> Get_Textbook_List(string subID);
     }
 }
