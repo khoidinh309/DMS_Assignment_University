@@ -47,9 +47,13 @@ namespace DMS_Assignment_University.MVP_Student.Views
             {
                 if(i%2 != 0)
                 {
-                    datagrid_list_sub.Rows[i].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#772aff");
+                    datagrid_list_sub.Rows[i].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0D324D");
                 }
             }
+            datagrid_list_sub.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            datagrid_list_sub.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            datagrid_list_sub.AllowUserToOrderColumns = true;
+            datagrid_list_sub.AllowUserToResizeColumns = true;
         }
 
         public static StudentView instance;

@@ -18,7 +18,7 @@ namespace DMS_Assignment_University.MVP_Faculty.Repository
             this.facultyID = facultyID;
         }
 
-        public void Add_New_Class(string ID)
+        public void Add_New_Subject(string ID)
         {
             using (var connection = new MySqlConnection(connection_string))
             using (var commnand = new MySqlCommand())
@@ -30,7 +30,7 @@ namespace DMS_Assignment_University.MVP_Faculty.Repository
             }
         }
 
-        public void Add_New_Subject(string subID)
+        public void Add_New_Class(string subID)
         {
             IEnumerable<Class> class_list = Get_Class_List(subID);
             List<string> class_name_list = new List<string>();
@@ -228,7 +228,27 @@ namespace DMS_Assignment_University.MVP_Faculty.Repository
 
         public IEnumerable<Textbook> Get_Textbook_List(string subID)
         {
-            throw new NotImplementedException();
+            var result = new List<Textbook>();
+            using (var connection = new MySqlConnection(connection_string))
+            using (var commnand = new MySqlCommand())
+            {
+                connection.Open();
+                commnand.Connection = connection;
+                commnand.CommandText = $"call get_textbook_list(\'{subID}\')";
+                using (var reader = commnand.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        result.Add(new Textbook
+                        {
+                            Id = Convert.ToInt32(reader[0]),
+                            Name = reader[1].ToString(),
+                            Specialization = reader[2].ToString()
+                        });
+                    }
+                }
+            }
+            return result;
         }
 
         public IEnumerable<Subject> Get_Unreleased_Subject_List()
@@ -260,6 +280,47 @@ namespace DMS_Assignment_University.MVP_Faculty.Repository
         public void Remove_Lecturer_From_Class(string class_name, string subID, int lecturer_ID)
         {
             throw new NotImplementedException();
+        }
+
+        public void Add_Lecturer_To_Class(string class_name, string subID, int semester, int lecturer_id)
+        {
+            using (var connection = new MySqlConnection(connection_string))
+            using (var commnand = new MySqlCommand())
+            {
+                connection.Open();
+                commnand.Connection = connection;
+                commnand.CommandText = $"call set_work_lecturer(\'{class_name}\',\'{subID}\',221,{lecturer_id}";
+                commnand.ExecuteNonQuery();
+            }
+        }
+
+        public IEnumerable<Class> Get_Not_Managed_Class()
+        {
+            var result = new List<Class>();
+            using (var connection = new MySqlConnection(connection_string))
+            using (var commnand = new MySqlCommand())
+            {
+                connection.Open();
+                commnand.Connection = connection;
+                commnand.CommandText = $"call get_not_managed_class()";
+                using (var reader = commnand.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        result.Add(new Class
+                        {
+                            Class_name = reader[0].ToString(),
+                            Subject_id = reader[1].ToString(),
+                            Subject_name = reader[2].ToString(),
+                            Semester = Convert.ToInt32(reader[3]),
+                            Num_credit = Convert.ToInt32(reader[4]),
+                            //Lecturer_name = get_lecturer_name(reader[1].ToString(), reader[0].ToString()),
+                            Current_number_member = Get_number_member(reader[1].ToString(), reader[0].ToString())
+                        });
+                    }
+                }
+            }
+            return result;
         }
     }
 }

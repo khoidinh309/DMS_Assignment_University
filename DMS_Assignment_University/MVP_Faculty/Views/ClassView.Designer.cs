@@ -30,7 +30,6 @@
         {
             this.datagrid_class_list = new System.Windows.Forms.DataGridView();
             this.btn_add_new_class = new System.Windows.Forms.Button();
-            this.btn_view_number_member = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_class_list)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -52,22 +51,11 @@
             this.btn_add_new_class.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_add_new_class.Location = new System.Drawing.Point(670, 106);
             this.btn_add_new_class.Name = "btn_add_new_class";
-            this.btn_add_new_class.Size = new System.Drawing.Size(90, 54);
+            this.btn_add_new_class.Size = new System.Drawing.Size(118, 54);
             this.btn_add_new_class.TabIndex = 1;
             this.btn_add_new_class.Text = "Thêm Lớp";
             this.btn_add_new_class.UseVisualStyleBackColor = true;
             this.btn_add_new_class.Click += new System.EventHandler(this.btn_add_new_class_Click);
-            // 
-            // btn_view_number_member
-            // 
-            this.btn_view_number_member.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_view_number_member.Location = new System.Drawing.Point(670, 204);
-            this.btn_view_number_member.Name = "btn_view_number_member";
-            this.btn_view_number_member.Size = new System.Drawing.Size(90, 54);
-            this.btn_view_number_member.TabIndex = 1;
-            this.btn_view_number_member.Text = "SL Sinh Viên";
-            this.btn_view_number_member.UseVisualStyleBackColor = true;
-            this.btn_view_number_member.Click += new System.EventHandler(this.btn_view_number_member_Click);
             // 
             // pictureBox1
             // 
@@ -87,7 +75,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btn_view_number_member);
             this.Controls.Add(this.btn_add_new_class);
             this.Controls.Add(this.datagrid_class_list);
             this.Name = "ClassView";
@@ -102,7 +89,6 @@
 
         private System.Windows.Forms.DataGridView datagrid_class_list;
         private System.Windows.Forms.Button btn_add_new_class;
-        private System.Windows.Forms.Button btn_view_number_member;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

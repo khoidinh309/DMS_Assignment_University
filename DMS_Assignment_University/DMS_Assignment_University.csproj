@@ -248,6 +248,12 @@
     <Compile Include="MVP_Faculty\Presenter\FacultyPresenter.cs" />
     <Compile Include="MVP_Faculty\Presenter\MainPresenter.cs" />
     <Compile Include="MVP_Faculty\Repository\FacultyRepository.cs" />
+    <Compile Include="MVP_Faculty\Views\AddLecturerToClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVP_Faculty\Views\AddLecturerToClass.Designer.cs">
+      <DependentUpon>AddLecturerToClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="MVP_Faculty\Views\Add_Subject_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -371,6 +377,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Log_Student.resx">
       <DependentUpon>Log_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVP_Faculty\Views\AddLecturerToClass.resx">
+      <DependentUpon>AddLecturerToClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MVP_Faculty\Views\Add_Subject_Form.resx">
       <DependentUpon>Add_Subject_Form.cs</DependentUpon>

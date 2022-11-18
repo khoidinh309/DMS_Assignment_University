@@ -19,5 +19,7 @@ namespace DMS_Assignment_University.MVP_Faculty.Models
         IEnumerable<Class> Get_Teaching_Class_List(int lecturer_ID);
         void Remove_Lecturer_From_Class(string class_name, string subID, int lecturer_ID);
         IEnumerable<Textbook> Get_Textbook_List(string subID);
+        void Add_Lecturer_To_Class(string class_name, string subID, int semester, int lecturer_id);
+        IEnumerable<Class> Get_Not_Managed_Class();
     }
 }

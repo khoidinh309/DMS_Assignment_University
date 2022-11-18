@@ -28,7 +28,18 @@ namespace DMS_Assignment_University.MVP_Faculty.Views
 
         public void Set_Released_Subject_List(BindingSource subject_list)
         {
-           this.datagrid_released_subject.DataSource = subject_list;
+            this.datagrid_released_subject.DataSource = subject_list;
+            for (int i = 0; i < datagrid_released_subject.Rows.Count; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    datagrid_released_subject.Rows[i].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0D324D");
+                }
+            }
+            datagrid_released_subject.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            datagrid_released_subject.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            datagrid_released_subject.AllowUserToOrderColumns = true;
+            datagrid_released_subject.AllowUserToResizeColumns = true;
         }
 
         public event EventHandler Add_New_Class_Event;

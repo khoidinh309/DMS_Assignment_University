@@ -36,9 +36,10 @@ namespace DMS_Assignment_University.MVP_Faculty.Views
 
         private void btn_add_new_class_Click(object sender, EventArgs e)
         {
+            var selected_class = class_list_data.Current as Class;
             try
             {
-                //this.facultyRepository.Add_New_Class();
+                this.facultyRepository.Add_New_Class(selected_class.Subject_id);
             }
             catch (Exception ex)
             {

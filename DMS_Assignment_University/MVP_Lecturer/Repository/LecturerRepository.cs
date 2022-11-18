@@ -117,7 +117,7 @@ namespace DMS_Assignment_University.MVP_Lecturer.Repository
             {
                 connection.Open();
                 commnand.Connection = connection;
-                commnand.CommandText = $"call get_textbook_list({subID})";
+                commnand.CommandText = $"call get_textbook_list(\'{subID}\')";
                 using (var reader = commnand.ExecuteReader())
                 {
                     while (reader.Read())

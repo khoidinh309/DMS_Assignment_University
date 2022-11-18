@@ -24,5 +24,10 @@ namespace DMS_Assignment_University.MVP_Student.Views
             StudentView.instance.Show();
             this.Close();
         }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

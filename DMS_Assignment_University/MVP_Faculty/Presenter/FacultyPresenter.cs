@@ -45,13 +45,16 @@ namespace DMS_Assignment_University.MVP_Faculty.Presenter
         {
             LecuturerViewForm lecuturerViewForm = new LecuturerViewForm(facultyRepository);
             lecuturerViewForm.MdiParent = FacultyMainView.global_view;
+            FacultyView.instance.Hide();
+            lecuturerViewForm.FormBorderStyle = FormBorderStyle.None;
+            lecuturerViewForm.Dock = DockStyle.Fill;
             lecuturerViewForm.Show();
         }
 
         private void Add_New_Subject(object sender, EventArgs e)
         {
             Add_Subject_Form add_subject_form = new Add_Subject_Form(facultyRepository);
-            add_subject_form.MdiParent = FacultyMainView.global_view;
+            //add_subject_form.MdiParent = FacultyMainView.global_view;
             add_subject_form.Show();
         }
 
@@ -61,7 +64,7 @@ namespace DMS_Assignment_University.MVP_Faculty.Presenter
             if (selected_subject != null)
             {
                 ClassView classView = new ClassView(selected_subject.Id, facultyRepository);
-                classView.MdiParent = FacultyMainView.global_view;
+                //classView.MdiParent = FacultyMainView.global_view;
                 classView.Show();
             }
             else

@@ -30,6 +30,17 @@ namespace DMS_Assignment_University.MVP_Faculty.Views
             lecturer_list = this.facultyRepository.Get_Lecturer_List();
             lecturer_list_data.DataSource = lecturer_list;
             datagrid_lecturer_list.DataSource = lecturer_list_data;
+            for (int i = 0; i < datagrid_lecturer_list.Rows.Count; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    datagrid_lecturer_list.Rows[i].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0D324D");
+                }
+            }
+            datagrid_lecturer_list.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            datagrid_lecturer_list.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            datagrid_lecturer_list.AllowUserToOrderColumns = true;
+            datagrid_lecturer_list.AllowUserToResizeColumns = true;
         }
 
         private void btn_view_class_list_Click(object sender, EventArgs e)
@@ -51,6 +62,11 @@ namespace DMS_Assignment_University.MVP_Faculty.Views
             FacultyView.instance.MdiParent = FacultyMainView.global_view;
             FacultyView.instance.Show();
             this.Close();
+        }
+
+        private void btn_add_lecturer_to_class_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

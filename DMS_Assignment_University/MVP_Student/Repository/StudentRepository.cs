@@ -87,7 +87,7 @@ namespace DMS_Assignment_University.MVP_Student.Repository
             {
                 connection.Open();
                 commnand.Connection = connection;
-                commnand.CommandText = $"call get_textbook_list({subject_id})";
+                commnand.CommandText = $"call get_textbook_list(\'{subject_id}\')";
                 using (var reader = commnand.ExecuteReader())
                 {
                     while (reader.Read())

@@ -31,6 +31,8 @@ namespace DMS_Assignment_University.MVP_Faculty.Views
             if (selected_subject != null)
             {
                 this._facultyRepository.Add_New_Subject(selected_subject.Id);
+                MessageBox.Show("Thêm Thành Công");
+                Load_Unreleased_Subject_List();
             }
             else
             {
@@ -43,6 +45,17 @@ namespace DMS_Assignment_University.MVP_Faculty.Views
             unreleased_subject_list = _facultyRepository.Get_Unreleased_Subject_List();
             unreleased_subject_list_data.DataSource = unreleased_subject_list;
             datagrid_unreleased_subject.DataSource = unreleased_subject_list;
+            for (int i = 0; i < datagrid_unreleased_subject.Rows.Count; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    datagrid_unreleased_subject.Rows[i].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0D324D");
+                }
+            }
+            datagrid_unreleased_subject.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            datagrid_unreleased_subject.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            datagrid_unreleased_subject.AllowUserToOrderColumns = true;
+            datagrid_unreleased_subject.AllowUserToResizeColumns = true;
         }
 
         private void btn_search_Click(object sender, EventArgs e)
