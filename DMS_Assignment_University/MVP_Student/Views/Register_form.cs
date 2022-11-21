@@ -29,6 +29,17 @@ namespace DMS_Assignment_University.MVP_Student.Views
             IEnumerable<Class> released_subject_list = studentRepository.Get_Released_Subject_List();
             class_list.DataSource = released_subject_list;
             datagrid_subject.DataSource = class_list;
+            for (int i = 0; i < datagrid_subject.Rows.Count; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    datagrid_subject.Rows[i].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0D324D");
+                }
+            }
+            datagrid_subject.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            datagrid_subject.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            datagrid_subject.AllowUserToOrderColumns = true;
+            datagrid_subject.AllowUserToResizeColumns = true;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

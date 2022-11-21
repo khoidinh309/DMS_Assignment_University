@@ -105,5 +105,20 @@ namespace DMS_Assignment_University.MVP_Lecturer.Views
             Member_List_View.instance = null;
             this.Close();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_subject_name_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

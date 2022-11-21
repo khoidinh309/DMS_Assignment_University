@@ -33,6 +33,17 @@ namespace DMS_Assignment_University.MVP_Faculty.Views
             class_list = facultyRepository.Get_Teaching_Class_List(lecturer_ID);
             class_list_data.DataSource = class_list;
             datagrid_class_list.DataSource = class_list_data;
+            for (int i = 0; i < datagrid_class_list.Rows.Count; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    datagrid_class_list.Rows[i].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0D324D");
+                }
+            }
+            datagrid_class_list.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            datagrid_class_list.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            datagrid_class_list.AllowUserToOrderColumns = true;
+            datagrid_class_list.AllowUserToResizeColumns = true;
         }
 
         private void btn_remove_Click(object sender, EventArgs e)
@@ -46,6 +57,11 @@ namespace DMS_Assignment_University.MVP_Faculty.Views
             {
                 MessageBox.Show("Loi He Thong!");
             }
+        }
+
+        private void datagrid_class_list_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

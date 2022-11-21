@@ -19,6 +19,7 @@ namespace DMS_Assignment_University.MVP_Lecturer.Presenter
 
         public LecturerPresenter(ILecturerRepository lecturerRepository, ILecturerView lecturerView, LecturerMainView mainView)
         {
+            teaching_class_list = new BindingSource();
             this.lecturerRepository = lecturerRepository;
             this.lecturerView = lecturerView;
             this.mainView = mainView;

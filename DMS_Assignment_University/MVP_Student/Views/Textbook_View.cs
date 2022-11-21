@@ -16,6 +16,17 @@ namespace DMS_Assignment_University.MVP_Student.Views
         {
             InitializeComponent();
             datagid_textbook.DataSource = textbook_list;
+            for (int i = 0; i < datagid_textbook.Rows.Count; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    datagid_textbook.Rows[i].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0D324D");
+                }
+            }
+            datagid_textbook.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            datagid_textbook.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            datagid_textbook.AllowUserToOrderColumns = true;
+            datagid_textbook.AllowUserToResizeColumns = true;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

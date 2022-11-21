@@ -36,6 +36,17 @@ namespace DMS_Assignment_University.MVP_Lecturer.Views
             number_member = student_list_data.Count();
             student_list.DataSource = student_list_data;
             datagrid_student_list.DataSource = student_list;
+            for (int i = 0; i < datagrid_student_list.Rows.Count; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    datagrid_student_list.Rows[i].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0D324D");
+                }
+            }
+            datagrid_student_list.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            datagrid_student_list.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            datagrid_student_list.AllowUserToOrderColumns = true;
+            datagrid_student_list.AllowUserToResizeColumns = true;
         }
 
         static public Member_List_View instance;

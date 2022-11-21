@@ -32,6 +32,17 @@ namespace DMS_Assignment_University.MVP_Lecturer.Views
         public void SetListClass(BindingSource list_subject)
         {
             this.datagrid_class_list.DataSource = list_subject;
+            for (int i = 0; i < datagrid_class_list.Rows.Count; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    datagrid_class_list.Rows[i].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0D324D");
+                }
+            }
+            datagrid_class_list.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            datagrid_class_list.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            datagrid_class_list.AllowUserToOrderColumns = true;
+            datagrid_class_list.AllowUserToResizeColumns = true;
         }
 
         public static LecturerView instance;

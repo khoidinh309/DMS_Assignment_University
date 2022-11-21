@@ -84,6 +84,7 @@
             this.txtbox_faculty_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
             this.txtbox_faculty_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbox_faculty_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbox_faculty_name.ForeColor = System.Drawing.Color.White;
             this.txtbox_faculty_name.Location = new System.Drawing.Point(1002, 52);
             this.txtbox_faculty_name.Name = "txtbox_faculty_name";
             this.txtbox_faculty_name.Size = new System.Drawing.Size(358, 23);
@@ -97,6 +98,7 @@
             this.txtbox_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
             this.txtbox_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbox_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtbox_name.ForeColor = System.Drawing.Color.White;
             this.txtbox_name.Location = new System.Drawing.Point(1086, 12);
             this.txtbox_name.Name = "txtbox_name";
             this.txtbox_name.Size = new System.Drawing.Size(166, 23);

@@ -32,6 +32,17 @@ namespace DMS_Assignment_University.MVP_Faculty.Views
             class_list = this.facultyRepository.Get_Class_List(subID);
             class_list_data.DataSource = class_list;
             datagrid_class_list.DataSource = class_list_data;
+            for (int i = 0; i < datagrid_class_list.Rows.Count; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    datagrid_class_list.Rows[i].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0D324D");
+                }
+            }
+            datagrid_class_list.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            datagrid_class_list.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            datagrid_class_list.AllowUserToOrderColumns = true;
+            datagrid_class_list.AllowUserToResizeColumns = true;
         }
 
         private void btn_add_new_class_Click(object sender, EventArgs e)

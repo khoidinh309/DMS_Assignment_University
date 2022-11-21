@@ -63,7 +63,7 @@ namespace DMS_Assignment_University.MVP_Lecturer.Repository
             {
                 connection.Open();
                 commnand.Connection = connection;
-                commnand.CommandText = $"call get_registered_class(\'{subID})\',\'{class_name}\'";
+                commnand.CommandText = $"call get_student_list(\'{subID}\',\'{class_name}\')";
                 using (var reader = commnand.ExecuteReader())
                 {
                     while (reader.Read())

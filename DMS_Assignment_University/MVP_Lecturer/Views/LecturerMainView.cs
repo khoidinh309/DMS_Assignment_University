@@ -26,5 +26,11 @@ namespace DMS_Assignment_University.MVP_Lecturer.Views
             Form1.instance.Show();
             this.Close();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Form1.instance.Show();
+            this.Close();
+        }
     }
 }

@@ -31,11 +31,11 @@
             this.txtbox_faculty_name = new System.Windows.Forms.TextBox();
             this.txtbox_faculty_ID = new System.Windows.Forms.TextBox();
             this.gradient_Panel1 = new DMS_Assignment_University.Gradient_Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gradient_Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // txtbox_faculty_name
@@ -43,6 +43,7 @@
             this.txtbox_faculty_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtbox_faculty_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
             this.txtbox_faculty_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbox_faculty_name.ForeColor = System.Drawing.Color.White;
             this.txtbox_faculty_name.Location = new System.Drawing.Point(935, 51);
             this.txtbox_faculty_name.Name = "txtbox_faculty_name";
             this.txtbox_faculty_name.Size = new System.Drawing.Size(198, 19);
@@ -54,6 +55,7 @@
             this.txtbox_faculty_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtbox_faculty_ID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
             this.txtbox_faculty_ID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbox_faculty_ID.ForeColor = System.Drawing.Color.White;
             this.txtbox_faculty_ID.Location = new System.Drawing.Point(975, 12);
             this.txtbox_faculty_ID.Name = "txtbox_faculty_ID";
             this.txtbox_faculty_ID.Size = new System.Drawing.Size(131, 19);
@@ -75,6 +77,17 @@
             this.gradient_Panel1.Size = new System.Drawing.Size(1282, 97);
             this.gradient_Panel1.TabIndex = 1;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(6)))), ((int)(((byte)(21)))));
+            this.pictureBox3.Image = global::DMS_Assignment_University.Properties.Resources.hcmut;
+            this.pictureBox3.Location = new System.Drawing.Point(33, 12);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 66);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -89,17 +102,6 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(6)))), ((int)(((byte)(21)))));
-            this.pictureBox3.Image = global::DMS_Assignment_University.Properties.Resources.hcmut;
-            this.pictureBox3.Location = new System.Drawing.Point(33, 12);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 66);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
-            // 
             // FacultyMainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -112,8 +114,8 @@
             this.Text = "FacultyMainView";
             this.gradient_Panel1.ResumeLayout(false);
             this.gradient_Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -38,7 +38,9 @@ namespace DMS_Assignment_University.MVP_Faculty.Presenter
 
         private void View_TextBook(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var selected_subject = released_subject_list.Current as Subject;
+            TextBookView textBookView = new TextBookView(facultyRepository, selected_subject.Id, selected_subject.Name);
+            textBookView.Show();
         }
 
         private void View_Lecturer(object sender, EventArgs e)

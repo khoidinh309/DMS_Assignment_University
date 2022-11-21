@@ -30,6 +30,17 @@ namespace DMS_Assignment_University.MVP_Faculty.Views
         {
             textbook_list = facultyRepository.Get_Textbook_List(subID);
             datagrid_textbook_list.DataSource = textbook_list;
+            for (int i = 0; i < datagrid_textbook_list.Rows.Count; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    datagrid_textbook_list.Rows[i].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0D324D");
+                }
+            }
+            datagrid_textbook_list.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            datagrid_textbook_list.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            datagrid_textbook_list.AllowUserToOrderColumns = true;
+            datagrid_textbook_list.AllowUserToResizeColumns = true;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
