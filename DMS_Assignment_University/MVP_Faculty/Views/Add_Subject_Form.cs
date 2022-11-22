@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DMS_Assignment_University.MVP_Faculty.Models;
+using DMS_Assignment_University.MVP_Faculty.Presenter;
 
 namespace DMS_Assignment_University.MVP_Faculty.Views
 {
@@ -16,13 +17,15 @@ namespace DMS_Assignment_University.MVP_Faculty.Views
         private IFacultyRepository _facultyRepository;
         private BindingSource unreleased_subject_list_data;
         private IEnumerable<Subject> unreleased_subject_list;
-        public Add_Subject_Form(IFacultyRepository facultyRepository)
+        private FacultyPresenter faculty_presenter;
+        public Add_Subject_Form(IFacultyRepository facultyRepository, FacultyPresenter facultyPresenter)
         {
             InitializeComponent();
             this._facultyRepository = facultyRepository;
             unreleased_subject_list_data = new BindingSource();
             Load_Unreleased_Subject_List();
             btn_add_subject.Click += Btn_add_subject_Click;
+            this.faculty_presenter = facultyPresenter;
         }
 
         private void Btn_add_subject_Click(object sender, EventArgs e)
@@ -86,6 +89,7 @@ namespace DMS_Assignment_University.MVP_Faculty.Views
         {
             FacultyView.instance.MdiParent = FacultyMainView.global_view;
             FacultyView.instance.Show();
+            faculty_presenter.Load_Released_Subject_List();
             this.Close();
         }
     }

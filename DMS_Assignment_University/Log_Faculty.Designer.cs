@@ -32,17 +32,17 @@
             this.txtbox_faculty_ID = new System.Windows.Forms.TextBox();
             this.btn_faculty_log_in = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel_error = new System.Windows.Forms.Panel();
             this.label_error = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel_error.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lb_Faculty
@@ -64,6 +64,7 @@
             this.txtbox_faculty_ID.Name = "txtbox_faculty_ID";
             this.txtbox_faculty_ID.Size = new System.Drawing.Size(311, 28);
             this.txtbox_faculty_ID.TabIndex = 1;
+            this.txtbox_faculty_ID.Tag = "0";
             // 
             // btn_faculty_log_in
             // 
@@ -94,6 +95,14 @@
             this.panel1.Size = new System.Drawing.Size(563, 102);
             this.panel1.TabIndex = 3;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(129, 84);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(311, 1);
+            this.panel2.TabIndex = 4;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Aqua;
@@ -104,14 +113,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(129, 84);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(311, 1);
-            this.panel2.TabIndex = 4;
             // 
             // panel3
             // 
@@ -124,16 +125,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(563, 157);
             this.panel3.TabIndex = 4;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::DMS_Assignment_University.Properties.Resources.hcmut;
-            this.pictureBox2.Location = new System.Drawing.Point(410, 49);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(125, 80);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
             // 
             // panel_error
             // 
@@ -154,8 +145,19 @@
             this.label_error.TabIndex = 1;
             this.label_error.Text = "Mã Số Không Hợp Lệ";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DMS_Assignment_University.Properties.Resources.hcmut;
+            this.pictureBox2.Location = new System.Drawing.Point(410, 49);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(125, 80);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
             // Log_Faculty
             // 
+            this.AcceptButton = this.btn_faculty_log_in;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
@@ -171,9 +173,9 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel_error.ResumeLayout(false);
             this.panel_error.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

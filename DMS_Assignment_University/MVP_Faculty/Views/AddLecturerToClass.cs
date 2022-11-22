@@ -18,12 +18,13 @@ namespace DMS_Assignment_University.MVP_Faculty.Views
         private IEnumerable<Class> class_list;
         IFacultyRepository facultyRepository;
         
-        public AddLecturerToClass(IFacultyRepository facultyRepository)
+        public AddLecturerToClass(IFacultyRepository facultyRepository, int lecturer_id)
         {
             InitializeComponent();
             class_list_data = new BindingSource();
-            Load_Class_List();
             this.facultyRepository = facultyRepository;
+            this.lecturer_id = lecturer_id;
+            Load_Class_List();
         }
 
         private void Load_Class_List()
@@ -64,6 +65,27 @@ namespace DMS_Assignment_University.MVP_Faculty.Views
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_set_work_Click(object sender, EventArgs e)
+        {
+            var selected_class = class_list_data.Current as Class;
+            if(selected_class != null)
+            {
+                try
+                {
+                    this.facultyRepository.Add_Lecturer_To_Class(selected_class.Class_name, selected_class.Subject_id, selected_class.Semester, this.lecturer_id);
+                    MessageBox.Show("Them Thanh Cong");
+                }
+                catch
+                {
+                    MessageBox.Show("Loi He Thong!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui Long Chon Lop!");
+            }
         }
     }
 }

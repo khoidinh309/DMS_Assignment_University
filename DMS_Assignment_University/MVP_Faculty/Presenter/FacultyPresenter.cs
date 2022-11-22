@@ -29,7 +29,7 @@ namespace DMS_Assignment_University.MVP_Faculty.Presenter
             Load_Released_Subject_List();
         }
 
-        private void Load_Released_Subject_List()
+        public void Load_Released_Subject_List()
         {
             subject_list = facultyRepository.Get_Released_Subject_List();
             released_subject_list.DataSource = subject_list;
@@ -55,7 +55,7 @@ namespace DMS_Assignment_University.MVP_Faculty.Presenter
 
         private void Add_New_Subject(object sender, EventArgs e)
         {
-            Add_Subject_Form add_subject_form = new Add_Subject_Form(facultyRepository);
+            Add_Subject_Form add_subject_form = new Add_Subject_Form(facultyRepository, this);
             //add_subject_form.MdiParent = FacultyMainView.global_view;
             add_subject_form.Show();
         }

@@ -289,7 +289,7 @@ namespace DMS_Assignment_University.MVP_Faculty.Repository
             {
                 connection.Open();
                 commnand.Connection = connection;
-                commnand.CommandText = $"call set_work_lecturer(\'{class_name}\',\'{subID}\',221,{lecturer_id}";
+                commnand.CommandText = $"call set_work_lecturer(\'{class_name}\',\'{subID}\',221,{lecturer_id})";
                 commnand.ExecuteNonQuery();
             }
         }
@@ -302,7 +302,7 @@ namespace DMS_Assignment_University.MVP_Faculty.Repository
             {
                 connection.Open();
                 commnand.Connection = connection;
-                commnand.CommandText = $"call get_not_managed_class()";
+                commnand.CommandText = $"call get_not_managed_class({facultyID})";
                 using (var reader = commnand.ExecuteReader())
                 {
                     while (reader.Read())

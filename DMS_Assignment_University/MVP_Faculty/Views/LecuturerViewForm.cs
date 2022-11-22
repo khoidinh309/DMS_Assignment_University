@@ -66,7 +66,12 @@ namespace DMS_Assignment_University.MVP_Faculty.Views
 
         private void btn_add_lecturer_to_class_Click(object sender, EventArgs e)
         {
-
+            LecturerModel selected_lecturer = lecturer_list_data.Current as LecturerModel;
+            if(selected_lecturer != null)
+            {
+                AddLecturerToClass addLecturerToClass = new AddLecturerToClass(facultyRepository, selected_lecturer.Lecturer_ID);
+                addLecturerToClass.Show();
+            }
         }
     }
 }

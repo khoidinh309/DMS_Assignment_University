@@ -20,6 +20,7 @@ namespace DMS_Assignment_University
         {
             InitializeComponent();
             panel_error.Visible = false;
+            this.ActiveControl = txt_student_id;
         }
 
         private void button1_Click(object sender, EventArgs e)

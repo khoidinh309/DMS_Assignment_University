@@ -19,6 +19,7 @@ namespace DMS_Assignment_University
         {
             InitializeComponent();
             panel_error.Visible = false;
+            this.ActiveControl = txtbox_faculty_ID;
         }
 
         private void btn_faculty_log_in_Click(object sender, EventArgs e)
