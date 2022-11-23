@@ -147,6 +147,18 @@ namespace DMS_Assignment_University.MVP_Lecturer.Repository
             }
         }
 
+        public void set_mark_to_student(string class_name, string subID, int student_ID, float mark)
+        {
+            using (var connection = new MySqlConnection(connection_string))
+            using (var commnand = new MySqlCommand())
+            {
+                connection.Open();
+                commnand.Connection = connection;
+                commnand.CommandText = $"call set_mark_to_student(\'{class_name}\',\'{subID}\',{student_ID},{mark})";
+                commnand.ExecuteNonQuery();
+            }
+        }
+
         private int Get_number_member(string subID, string class_name)
         {
             int number_of_member = 0;

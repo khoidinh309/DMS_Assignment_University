@@ -29,7 +29,7 @@ namespace DMS_Assignment_University.MVP_Lecturer.Views
             lb_number_member.Text = $"Sĩ Số: {number_member}";
         }
 
-        private void Load_Student_List()
+        public void Load_Student_List()
         {
             student_list = new BindingSource();
             IEnumerable<StudentModel> student_list_data = this.lecturerRepository.get_student_list(subID, class_name);
@@ -74,6 +74,13 @@ namespace DMS_Assignment_University.MVP_Lecturer.Views
             LecturerView.instance.Show();
             Member_List_View.instance = null;
             this.Close();
+        }
+
+        private void btn_add_mark_Click(object sender, EventArgs e)
+        {
+            StudentModel selected_student = student_list.Current as StudentModel;
+            Add_Mark_To_Student addMarkForm = new Add_Mark_To_Student(selected_student.Name,this.class_name, this.subID, selected_student.Id, this);
+            addMarkForm.Show();
         }
     }
 }

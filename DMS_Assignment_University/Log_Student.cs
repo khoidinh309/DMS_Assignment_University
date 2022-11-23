@@ -30,7 +30,7 @@ namespace DMS_Assignment_University
                 int studentID = Convert.ToInt32(txt_student_id.Text);
                 string student_name = "";
                 string fac_name = "";
-                string connectionString = @"datasource = localhost; username = khoidinh309; password = khoikhoi; database = university";
+                string connectionString = @"datasource = localhost; username = student; password = student_password; database = university";
                 using (var connection = new MySqlConnection(connectionString))
                 using (var commnand = new MySqlCommand())
                 {

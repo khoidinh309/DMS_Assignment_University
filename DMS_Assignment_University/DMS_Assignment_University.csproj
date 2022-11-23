@@ -307,6 +307,12 @@
     <Compile Include="MVP_Lecturer\Views\AddTextBookView.Designer.cs">
       <DependentUpon>AddTextBookView.cs</DependentUpon>
     </Compile>
+    <Compile Include="MVP_Lecturer\Views\Add_Mark_To_Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVP_Lecturer\Views\Add_Mark_To_Student.Designer.cs">
+      <DependentUpon>Add_Mark_To_Student.cs</DependentUpon>
+    </Compile>
     <Compile Include="MVP_Lecturer\Views\ILecturerView.cs" />
     <Compile Include="MVP_Lecturer\Views\LecturerMainView.cs">
       <SubType>Form</SubType>
@@ -404,6 +410,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MVP_Lecturer\Views\AddTextBookView.resx">
       <DependentUpon>AddTextBookView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVP_Lecturer\Views\Add_Mark_To_Student.resx">
+      <DependentUpon>Add_Mark_To_Student.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MVP_Lecturer\Views\LecturerMainView.resx">
       <DependentUpon>LecturerMainView.cs</DependentUpon>

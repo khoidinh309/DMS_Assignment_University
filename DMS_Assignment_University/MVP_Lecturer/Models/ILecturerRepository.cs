@@ -15,5 +15,6 @@ namespace DMS_Assignment_University.MVP_Lecturer.Models
         Textbook Get_Existing_TextBook(string subID);
         void Modify_TextBook(Textbook textbook);
         IEnumerable<Textbook> Get_Textbook_List(string subID);
+        void set_mark_to_student(string class_name, string subID, int student_ID, float mark);
     }
 }
