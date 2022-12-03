@@ -58,7 +58,6 @@ namespace DMS_Assignment_University.MVP_Lecturer.Views
                     instance.WindowState = FormWindowState.Normal;
                 instance.BringToFront();
             }
-
         }
 
         private void btn_save_Click(object sender, EventArgs e)

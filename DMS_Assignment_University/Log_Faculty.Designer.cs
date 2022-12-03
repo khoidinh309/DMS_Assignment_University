@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Log_Faculty));
             this.lb_Faculty = new System.Windows.Forms.Label();
             this.txtbox_faculty_ID = new System.Windows.Forms.TextBox();
             this.btn_faculty_log_in = new System.Windows.Forms.Button();
@@ -167,6 +168,7 @@
             this.Controls.Add(this.btn_faculty_log_in);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Log_Faculty";
             this.Text = "Log_Faculty";
             this.panel1.ResumeLayout(false);

@@ -49,13 +49,14 @@ namespace DMS_Assignment_University.MVP_Faculty.Views
         private void btn_remove_Click(object sender, EventArgs e)
         {
             Class selected_Class = class_list_data.Current as Class;
+            MessageBox.Show(selected_Class.Class_name);
             try
             {
                 this.facultyRepository.Remove_Lecturer_From_Class(selected_Class.Class_name, selected_Class.Subject_id, lecturer_ID);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Loi He Thong!");
+                MessageBox.Show(ex.ToString());
             }
         }
 

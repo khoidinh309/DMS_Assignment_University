@@ -45,7 +45,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(66, 147);
+            this.label2.Location = new System.Drawing.Point(56, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 25);
             this.label2.TabIndex = 2;
@@ -57,7 +57,7 @@
             this.txtbox_TextBook_Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(6)))), ((int)(((byte)(21)))));
             this.txtbox_TextBook_Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbox_TextBook_Name.ForeColor = System.Drawing.Color.White;
-            this.txtbox_TextBook_Name.Location = new System.Drawing.Point(70, 189);
+            this.txtbox_TextBook_Name.Location = new System.Drawing.Point(60, 136);
             this.txtbox_TextBook_Name.Name = "txtbox_TextBook_Name";
             this.txtbox_TextBook_Name.Size = new System.Drawing.Size(206, 19);
             this.txtbox_TextBook_Name.TabIndex = 0;
@@ -66,7 +66,7 @@
             // btn_save
             // 
             this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_save.Location = new System.Drawing.Point(283, 296);
+            this.btn_save.Location = new System.Drawing.Point(262, 229);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(155, 46);
             this.btn_save.TabIndex = 3;
@@ -78,7 +78,7 @@
             // 
             this.lb_subject_id.AutoSize = true;
             this.lb_subject_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_subject_id.Location = new System.Drawing.Point(66, 66);
+            this.lb_subject_id.Location = new System.Drawing.Point(55, 34);
             this.lb_subject_id.Name = "lb_subject_id";
             this.lb_subject_id.Size = new System.Drawing.Size(170, 25);
             this.lb_subject_id.TabIndex = 4;
@@ -88,7 +88,7 @@
             // 
             this.lb_subject_name.AutoSize = true;
             this.lb_subject_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_subject_name.Location = new System.Drawing.Point(507, 66);
+            this.lb_subject_name.Location = new System.Drawing.Point(410, 34);
             this.lb_subject_name.Name = "lb_subject_name";
             this.lb_subject_name.Size = new System.Drawing.Size(220, 25);
             this.lb_subject_name.TabIndex = 4;
@@ -102,9 +102,9 @@
             this.txtbox_specialization.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(6)))), ((int)(((byte)(21)))));
             this.txtbox_specialization.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbox_specialization.ForeColor = System.Drawing.Color.White;
-            this.txtbox_specialization.Location = new System.Drawing.Point(511, 189);
+            this.txtbox_specialization.Location = new System.Drawing.Point(415, 136);
             this.txtbox_specialization.Name = "txtbox_specialization";
-            this.txtbox_specialization.Size = new System.Drawing.Size(229, 19);
+            this.txtbox_specialization.Size = new System.Drawing.Size(233, 19);
             this.txtbox_specialization.TabIndex = 0;
             this.txtbox_specialization.Tag = "1";
             // 
@@ -112,7 +112,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(505, 147);
+            this.label3.Location = new System.Drawing.Point(409, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(144, 25);
             this.label3.TabIndex = 1;
@@ -123,7 +123,7 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::DMS_Assignment_University.Properties.Resources.back_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(679, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(683, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(61, 47);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -134,7 +134,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(70, 219);
+            this.panel1.Location = new System.Drawing.Point(60, 166);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(206, 1);
             this.panel1.TabIndex = 6;
@@ -143,8 +143,8 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(510, 212);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(418, 159);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(232, 1);
             this.panel2.TabIndex = 7;
@@ -154,7 +154,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(6)))), ((int)(((byte)(21)))));
-            this.ClientSize = new System.Drawing.Size(762, 427);
+            this.ClientSize = new System.Drawing.Size(766, 366);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LecturerMainView));
             this.txtbox_fac_name = new System.Windows.Forms.TextBox();
             this.txtbox_lecturer_name = new System.Windows.Forms.TextBox();
             this.gradient_Panel1 = new DMS_Assignment_University.Gradient_Panel();
@@ -110,6 +111,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1162, 592);
             this.Controls.Add(this.gradient_Panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "LecturerMainView";
             this.Text = "LecturerMainView";

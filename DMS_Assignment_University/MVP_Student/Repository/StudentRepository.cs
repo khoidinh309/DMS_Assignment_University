@@ -135,12 +135,29 @@ namespace DMS_Assignment_University.MVP_Student.Repository
 
         public void Register_Method(string class_name, string subject_id, int semester)
         {
+            string lecturer_ID = "";
             using (var connection = new MySqlConnection(connection_string))
             using (var commnand = new MySqlCommand())
             {
                 connection.Open();
                 commnand.Connection = connection;
-                commnand.CommandText = $"call add_new_student_of_class(\'{class_name}\',{semester},\'{subject_id}\',{this.student_id})";
+                commnand.CommandText = $"select l.lecturer_id from teach as t, lecturer as l " +
+                    $"where t.class_name = \'{class_name}\' and t.subID = \'{subject_id}\' and l.lecturer_Id = t.lecturer_Id";
+                using (var reader = commnand.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        lecturer_ID = reader[0].ToString();
+                    }
+                }
+            }
+            if (lecturer_ID == "") lecturer_ID = "null";
+            using (var connection = new MySqlConnection(connection_string))
+            using (var commnand = new MySqlCommand())
+            {
+                connection.Open();
+                commnand.Connection = connection;
+                commnand.CommandText = $"call add_new_student_of_class(\'{class_name}\',{semester},\'{subject_id}\',{this.student_id},{lecturer_ID})";
                 commnand.ExecuteNonQuery();
             }
         }

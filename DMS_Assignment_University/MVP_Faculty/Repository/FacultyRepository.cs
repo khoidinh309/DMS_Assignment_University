@@ -279,7 +279,14 @@ namespace DMS_Assignment_University.MVP_Faculty.Repository
 
         public void Remove_Lecturer_From_Class(string class_name, string subID, int lecturer_ID)
         {
-            throw new NotImplementedException();
+            using (var connection = new MySqlConnection(connection_string))
+            using (var commnand = new MySqlCommand())
+            {
+                connection.Open();
+                commnand.Connection = connection;
+                commnand.CommandText = $"call remove_lecturer_from_class({lecturer_ID},\'{class_name}\',\'{subID}\',221)";
+                commnand.ExecuteNonQuery();
+            }
         }
 
         public void Add_Lecturer_To_Class(string class_name, string subID, int semester, int lecturer_id)
