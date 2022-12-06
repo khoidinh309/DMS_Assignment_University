@@ -11,7 +11,7 @@ namespace DMS_Assignment_University.MVP_Student.Models
     {
         string Connection_string { get; set; }
 
-        void Register_Method(string class_name, string subject_id,int semester);
+        void Register_Method(string class_name, string subject_id,int semester, int num_credit);
         IEnumerable<Class> List_All_Subject();
         int Get_Num_Credits();
         int Get_Num_Subject();

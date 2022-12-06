@@ -26,7 +26,31 @@ namespace DMS_Assignment_University.MVP_Lecturer.Repository
             {
                 connection.Open();
                 commnand.Connection = connection;
-                commnand.CommandText = $"call add_new_textbook({this.lecturer_id},\'{subID}\',\'{texbook_name}\',\'{specialization}\')";
+                commnand.CommandText = $"call add_new_textbook(\'{texbook_name}\',\'{specialization}\')";
+                commnand.ExecuteNonQuery();
+            }
+            int textbook_id = 0;
+            using (var connection = new MySqlConnection(connection_string))
+            using (var commnand = new MySqlCommand())
+            {
+                connection.Open();
+                commnand.Connection = connection;
+                commnand.CommandText = $"select textbook_id from textbook where textbook_name = \'{texbook_name}\' and specialization = \'{specialization}\'";
+                using (var reader = commnand.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        textbook_id = Convert.ToInt32(reader[0]);
+                    }
+                }
+            }
+            using (var connection = new MySqlConnection(connection_string))
+            using (var commnand = new MySqlCommand())
+            {
+                connection.Open();
+                commnand.Connection = connection;
+                commnand.CommandText = $"update manage_subject set textbook_id = {textbook_id} " +
+                    $"where subID = \'{subID}\' and lecturer_id = {this.lecturer_id} and semester = 221";
                 commnand.ExecuteNonQuery();
             }
         }

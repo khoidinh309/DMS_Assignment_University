@@ -22,7 +22,15 @@ namespace DMS_Assignment_University.MVP_Student.Repository
 
         public int Get_Num_Credits()
         {
-            throw new NotImplementedException();
+            int num_credit = 0;
+            IEnumerable<Class> registed_class = List_All_Subject();
+
+            foreach(var item in registed_class)
+            {
+                num_credit += item.Num_credit;
+            }
+
+            return num_credit;
         }
 
         public int Get_Num_Subject()
@@ -133,8 +141,13 @@ namespace DMS_Assignment_University.MVP_Student.Repository
             return result;
         }
 
-        public void Register_Method(string class_name, string subject_id, int semester)
+        public void Register_Method(string class_name, string subject_id, int semester, int num_credit)
         {
+            int total_credit = Get_Num_Credits();
+            if(total_credit + num_credit > 20)
+            {
+                throw new Exception("Khong duoc dang ky vuot qua 20 tc!");
+            }
             string lecturer_ID = "";
             using (var connection = new MySqlConnection(connection_string))
             using (var commnand = new MySqlCommand())

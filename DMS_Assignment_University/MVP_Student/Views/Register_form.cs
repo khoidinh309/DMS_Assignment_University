@@ -69,11 +69,11 @@ namespace DMS_Assignment_University.MVP_Student.Views
                     try
                     {
                         studentRepository.delete_registered_class(selected_class.Subject_id);
-                        studentRepository.Register_Method(selected_class.Class_name, selected_class.Subject_id, selected_class.Semester);
+                        studentRepository.Register_Method(selected_class.Class_name, selected_class.Subject_id, selected_class.Semester, selected_class.Num_credit);
                         MessageBox.Show("Them thanh cong");
                     }catch (Exception ex)
                     {
-                        MessageBox.Show("Loi he thong, vui long thu lai!");
+                        MessageBox.Show(ex.ToString());
                     }
                 }
                 else
