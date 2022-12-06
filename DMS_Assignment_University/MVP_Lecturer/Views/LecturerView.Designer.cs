@@ -131,6 +131,7 @@
             this.Controls.Add(this.btn_add_textbook);
             this.Controls.Add(this.btn_view_Student);
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LecturerView";
             this.Text = "LecturerView";
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_class_list)).EndInit();

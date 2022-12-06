@@ -134,7 +134,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lb_number_member);
             this.ForeColor = System.Drawing.Color.White;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Member_List_View";
             this.Text = "Member_List_View";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

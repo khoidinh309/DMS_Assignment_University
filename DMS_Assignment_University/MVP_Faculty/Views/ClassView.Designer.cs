@@ -119,6 +119,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_add_new_class);
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ClassView";
             this.Text = "ClassView";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

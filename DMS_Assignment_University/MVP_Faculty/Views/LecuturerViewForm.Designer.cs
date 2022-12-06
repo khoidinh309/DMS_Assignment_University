@@ -133,6 +133,7 @@
             this.Controls.Add(this.btn_add_lecturer_to_class);
             this.Controls.Add(this.btn_view_class_list);
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LecuturerViewForm";
             this.Text = "LecuturerViewForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

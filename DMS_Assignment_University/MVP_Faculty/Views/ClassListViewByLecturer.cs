@@ -64,5 +64,10 @@ namespace DMS_Assignment_University.MVP_Faculty.Views
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

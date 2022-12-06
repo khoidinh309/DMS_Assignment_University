@@ -63,7 +63,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DMS_Assignment_University.Properties.Resources.back_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(708, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(714, 22);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(65, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -128,6 +128,7 @@
             this.Controls.Add(this.lb_subject_name);
             this.Controls.Add(this.lb_subject_ID);
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TextBookView";
             this.Text = "TextBookView";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

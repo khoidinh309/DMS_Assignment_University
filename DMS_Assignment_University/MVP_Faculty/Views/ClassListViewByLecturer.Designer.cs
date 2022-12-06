@@ -36,7 +36,9 @@
             this.lb_Lecturer_Name = new System.Windows.Forms.Label();
             this.lb_lecturer_ID = new System.Windows.Forms.Label();
             this.datagrid_class_list = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_class_list)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_remove
@@ -118,20 +120,34 @@
             this.datagrid_class_list.Size = new System.Drawing.Size(619, 342);
             this.datagrid_class_list.TabIndex = 8;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DMS_Assignment_University.Properties.Resources.close_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(721, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(67, 49);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // ClassListViewByLecturer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(6)))), ((int)(((byte)(21)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.datagrid_class_list);
             this.Controls.Add(this.lb_lecturer_ID);
             this.Controls.Add(this.lb_Lecturer_Name);
             this.Controls.Add(this.btn_remove);
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ClassListViewByLecturer";
             this.Text = "ClassListViewByLecturer";
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_class_list)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,5 +158,6 @@
         private System.Windows.Forms.Label lb_Lecturer_Name;
         private System.Windows.Forms.Label lb_lecturer_ID;
         private System.Windows.Forms.DataGridView datagrid_class_list;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

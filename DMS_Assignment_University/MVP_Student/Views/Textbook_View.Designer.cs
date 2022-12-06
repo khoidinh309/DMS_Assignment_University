@@ -105,6 +105,7 @@
             this.Controls.Add(this.datagid_textbook);
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Textbook_View";
             this.Text = "Textbook_View";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
