@@ -26,6 +26,9 @@ namespace DMS_Assignment_University.MVP_Faculty.Views
             Load_Unreleased_Subject_List();
             btn_add_subject.Click += Btn_add_subject_Click;
             this.faculty_presenter = facultyPresenter;
+            lb_error.Visible = false;
+            lb_error_1.Visible = false;
+            lb_error_2.Visible = false;
         }
 
         private void Btn_add_subject_Click(object sender, EventArgs e)
@@ -91,6 +94,33 @@ namespace DMS_Assignment_University.MVP_Faculty.Views
             FacultyView.instance.Show();
             faculty_presenter.Load_Released_Subject_List();
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string subID = txtbox_subject_ID.Text;
+            string subName = txtbox_subject_name.Text;
+            string numCredit = txtbox_num_credit.Text;
+            int num_credit = 0;
+            try
+            {
+                num_credit = Convert.ToInt32(numCredit);
+            }
+            catch
+            {
+                MessageBox.Show("Tín Chỉ Phải Là Số Tự Nhiên");
+            }
+            if(subID.Length != 6) { lb_error.Visible = true; return; }
+            if(num_credit <= 0 || num_credit > 4) { lb_error_2.Visible = true; return;}
+            try
+            {
+                _facultyRepository.AddNewSubject(subID, subName, num_credit);
+                Load_Unreleased_Subject_List();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

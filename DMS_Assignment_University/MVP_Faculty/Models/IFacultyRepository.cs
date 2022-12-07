@@ -21,5 +21,6 @@ namespace DMS_Assignment_University.MVP_Faculty.Models
         IEnumerable<Textbook> Get_Textbook_List(string subID);
         void Add_Lecturer_To_Class(string class_name, string subID, int semester, int lecturer_id);
         IEnumerable<Class> Get_Not_Managed_Class();
+        void AddNewSubject(string subID, string subName, int num_credit);
     }
 }

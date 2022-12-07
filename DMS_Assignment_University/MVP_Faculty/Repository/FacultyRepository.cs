@@ -12,10 +12,15 @@ namespace DMS_Assignment_University.MVP_Faculty.Repository
     {
         private readonly string connection_string;
         private int facultyID;
+        private Dictionary<int, string> Facuty_sub_ID;
         public FacultyRepository(string connection, int facultyID)
         {
             this.connection_string = connection;
             this.facultyID = facultyID;
+            Facuty_sub_ID = new Dictionary<int, string>();
+            Facuty_sub_ID[106] = "CO";
+            Facuty_sub_ID[114] = "CH";
+            Facuty_sub_ID[108] = "EE";
         }
 
         public void Add_New_Subject(string ID)
@@ -328,6 +333,23 @@ namespace DMS_Assignment_University.MVP_Faculty.Repository
                 }
             }
             return result;
+        }
+
+        public void AddNewSubject(string subID, string subName, int num_credit)
+        {
+            string facuty_sub_ID = subID.Substring(0, 2);
+            if (facuty_sub_ID != Facuty_sub_ID[facultyID]) throw new Exception("Sai Mã Môn Của Khoa, Vui Lòng Sửa Lại");
+            if (subName.Length > 255) throw new Exception("Tên Môn Vượt Giới Hạn 255 ký tự, Vui Lòng Thử Lại");
+
+            using (var connection = new MySqlConnection(connection_string))
+            using (var commnand = new MySqlCommand())
+            {
+                connection.Open();
+                commnand.Connection = connection;
+                commnand.CommandText = $"insert into subject" +
+                    $" values(\'{subID}\',\'{subName}\',{num_credit},221,{this.facultyID})";
+                commnand.ExecuteNonQuery();
+            }
         }
     }
 }
