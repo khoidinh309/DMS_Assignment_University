@@ -341,6 +341,24 @@ namespace DMS_Assignment_University.MVP_Faculty.Repository
             if (facuty_sub_ID != Facuty_sub_ID[facultyID]) throw new Exception("Sai Mã Môn Của Khoa, Vui Lòng Sửa Lại");
             if (subName.Length > 255) throw new Exception("Tên Môn Vượt Giới Hạn 255 ký tự, Vui Lòng Thử Lại");
 
+            int count = 0;
+            using (var connection = new MySqlConnection(connection_string))
+            using (var commnand = new MySqlCommand())
+            {
+                connection.Open();
+                commnand.Connection = connection;
+                commnand.CommandText = $"select * from subject where subID = \'{subID}\'";
+                using (var reader = commnand.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        count++;
+                    }
+                }
+            }
+
+            if (count > 0) throw new Exception("Mã Môn Học Đã Tồn Tại, Vui Lòng Thử Lại!");
+
             using (var connection = new MySqlConnection(connection_string))
             using (var commnand = new MySqlCommand())
             {

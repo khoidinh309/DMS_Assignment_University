@@ -116,10 +116,11 @@ namespace DMS_Assignment_University.MVP_Faculty.Views
             {
                 _facultyRepository.AddNewSubject(subID, subName, num_credit);
                 Load_Unreleased_Subject_List();
+                MessageBox.Show("Them Thanh Cong");
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.Message);
             }
         }
     }

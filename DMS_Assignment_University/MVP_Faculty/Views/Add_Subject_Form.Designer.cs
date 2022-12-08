@@ -40,20 +40,20 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtbox_subject_ID = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lb_error = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lb_ID = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lb_error_1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtbox_subject_name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.lb_error_2 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.txtbox_num_credit = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.lb_error = new System.Windows.Forms.Label();
-            this.lb_error_1 = new System.Windows.Forms.Label();
-            this.lb_error_2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_unreleased_subject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -169,6 +169,7 @@
             this.txtbox_subject_ID.Name = "txtbox_subject_ID";
             this.txtbox_subject_ID.Size = new System.Drawing.Size(263, 23);
             this.txtbox_subject_ID.TabIndex = 5;
+            this.txtbox_subject_ID.Tag = "0";
             // 
             // panel2
             // 
@@ -179,6 +180,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(263, 68);
             this.panel2.TabIndex = 6;
+            // 
+            // lb_error
+            // 
+            this.lb_error.AutoSize = true;
+            this.lb_error.ForeColor = System.Drawing.Color.Brown;
+            this.lb_error.Location = new System.Drawing.Point(3, 38);
+            this.lb_error.Name = "lb_error";
+            this.lb_error.Size = new System.Drawing.Size(111, 20);
+            this.lb_error.TabIndex = 9;
+            this.lb_error.Text = "Không Hợp Lệ";
             // 
             // panel3
             // 
@@ -208,6 +219,16 @@
             this.panel4.Size = new System.Drawing.Size(263, 68);
             this.panel4.TabIndex = 6;
             // 
+            // lb_error_1
+            // 
+            this.lb_error_1.AutoSize = true;
+            this.lb_error_1.ForeColor = System.Drawing.Color.Brown;
+            this.lb_error_1.Location = new System.Drawing.Point(3, 38);
+            this.lb_error_1.Name = "lb_error_1";
+            this.lb_error_1.Size = new System.Drawing.Size(111, 20);
+            this.lb_error_1.TabIndex = 9;
+            this.lb_error_1.Text = "Không Hợp Lệ";
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
@@ -228,6 +249,7 @@
             this.txtbox_subject_name.Name = "txtbox_subject_name";
             this.txtbox_subject_name.Size = new System.Drawing.Size(263, 23);
             this.txtbox_subject_name.TabIndex = 5;
+            this.txtbox_subject_name.Tag = "1";
             // 
             // label1
             // 
@@ -247,6 +269,16 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(263, 59);
             this.panel6.TabIndex = 6;
+            // 
+            // lb_error_2
+            // 
+            this.lb_error_2.AutoSize = true;
+            this.lb_error_2.ForeColor = System.Drawing.Color.Brown;
+            this.lb_error_2.Location = new System.Drawing.Point(3, 27);
+            this.lb_error_2.Name = "lb_error_2";
+            this.lb_error_2.Size = new System.Drawing.Size(111, 20);
+            this.lb_error_2.TabIndex = 9;
+            this.lb_error_2.Text = "Không Hợp Lệ";
             // 
             // panel7
             // 
@@ -268,6 +300,7 @@
             this.txtbox_num_credit.Name = "txtbox_num_credit";
             this.txtbox_num_credit.Size = new System.Drawing.Size(263, 23);
             this.txtbox_num_credit.TabIndex = 5;
+            this.txtbox_num_credit.Tag = "2";
             // 
             // label2
             // 
@@ -288,36 +321,6 @@
             this.button1.Text = "Lưu";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // lb_error
-            // 
-            this.lb_error.AutoSize = true;
-            this.lb_error.ForeColor = System.Drawing.Color.Brown;
-            this.lb_error.Location = new System.Drawing.Point(3, 38);
-            this.lb_error.Name = "lb_error";
-            this.lb_error.Size = new System.Drawing.Size(111, 20);
-            this.lb_error.TabIndex = 9;
-            this.lb_error.Text = "Không Hợp Lệ";
-            // 
-            // lb_error_1
-            // 
-            this.lb_error_1.AutoSize = true;
-            this.lb_error_1.ForeColor = System.Drawing.Color.Brown;
-            this.lb_error_1.Location = new System.Drawing.Point(3, 38);
-            this.lb_error_1.Name = "lb_error_1";
-            this.lb_error_1.Size = new System.Drawing.Size(111, 20);
-            this.lb_error_1.TabIndex = 9;
-            this.lb_error_1.Text = "Không Hợp Lệ";
-            // 
-            // lb_error_2
-            // 
-            this.lb_error_2.AutoSize = true;
-            this.lb_error_2.ForeColor = System.Drawing.Color.Brown;
-            this.lb_error_2.Location = new System.Drawing.Point(3, 27);
-            this.lb_error_2.Name = "lb_error_2";
-            this.lb_error_2.Size = new System.Drawing.Size(111, 20);
-            this.lb_error_2.TabIndex = 9;
-            this.lb_error_2.Text = "Không Hợp Lệ";
             // 
             // Add_Subject_Form
             // 

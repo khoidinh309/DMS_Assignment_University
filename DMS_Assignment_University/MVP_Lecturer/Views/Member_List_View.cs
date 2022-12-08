@@ -79,7 +79,7 @@ namespace DMS_Assignment_University.MVP_Lecturer.Views
         private void btn_add_mark_Click(object sender, EventArgs e)
         {
             StudentModel selected_student = student_list.Current as StudentModel;
-            Add_Mark_To_Student addMarkForm = new Add_Mark_To_Student(selected_student.Name,this.class_name, this.subID, selected_student.Id, this);
+            Add_Mark_To_Student addMarkForm = new Add_Mark_To_Student(selected_student.Name,this.class_name, this.subID, selected_student.Id, this, this.lecturerRepository);
             addMarkForm.Show();
         }
     }
